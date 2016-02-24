@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="model-label panel-heading"><big><%= link_to ticket_display_title(ticket), ticket.url, :target => "_blank" %></big><span style="float: right" class="label <%= status_label_class(ticket.status) %>"><%= format_tag(ticket.status) %></span>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-sm-12">
+              <%= render partial: "ticket_details", object: ticket %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    Search Hits
+                  </div>
+                  <ul class="list-group">
+                    <% ticket.comment_preview_highlight.each do |comment| %>
+                      <li class="list-group-item"><%= comment.html_safe %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <% ticket.tags.each do |tag| %>
+                  <span class="label label-default">
+                    <%= format_tag(tag) %>
+                  </span>
+                <% end %>
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="ticket-body">
+              <%= render partial: "ticket_body", object: ticket %> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

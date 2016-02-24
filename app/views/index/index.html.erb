@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1><%= SITE_NAME %></h1>
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Search</span>
+  <input type="text" id ="search-box" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<br>
+<div id="ticket-pane">
+  <% if @search_description.present? %>
+    <div class="container">
+      <div class="jumbotron">
+        <p><%= @search_description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_tag do %>
+  $('input#search-box').focus();
+  var searchBox = new SearchBox('input#search-box','#ticket-pane','#ticket-pane');
+  searchBox.setup();
+<% end %>

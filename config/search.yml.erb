@@ -1,0 +1,26 @@
+# Use this field to present a human-readable description of the search to help users
+search_description: This query finds tickets with titles and posts that contain phrases that are approximate matches to the search term. It also matches ticket IDs and requesting organization names. The query will find up to 60 matching tickets. Results are sorted by decreasing strength of the match.
+
+search_definition:
+  # This is an example of a phrase_prefix type elasticsearch query
+  from:	0
+  size:	60 #return up to 60 results
+  query:
+    multi_match:
+      query: <%= search_string %> # SEARCH_STRING has the value in the search box in it.
+      type: phrase_prefix # phrase_prefix search
+      slop: 10
+      fields:
+        - subject
+        - comments
+        - organization_name
+        - id_string
+  highlight:
+    pre_tags: [<b>]
+    post_tags: [</b>]
+    encoder: html # protect against remote code execution by escaping HTML before adding highlighting
+    fields:
+      subject: {}
+      comments: {}
+      organization_name: {}
+      id_string: {}

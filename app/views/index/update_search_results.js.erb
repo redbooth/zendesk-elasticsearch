@@ -1,0 +1,5 @@
+<% if @tickets.nil? || @tickets.count > 0 %>
+	$('#ticket-pane').html("<%= escape_javascript render( partial: "ticket", collection: @tickets) %>");
+<% else %>
+	$('#ticket-pane').html("<%= escape_javascript render( partial: "no_ticket") %>");
+<% end %>

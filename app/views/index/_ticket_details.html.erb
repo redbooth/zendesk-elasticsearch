@@ -1,0 +1,5 @@
+<div><b>Owner: </b><%= user_name(ticket_details.owner) %></div>
+<div><b>Requester: </b><%= user_name(ticket_details.requester_id) %></div>
+<div><b>Organization: </b><%= organization_name(ticket_details.organization_id) %></div>
+<div><b>Created At: </b><%= ticket_created_at(ticket_details) %></div>
+<div><b>Updated At: </b><%= ticket_updated_at(ticket_details) %></div>

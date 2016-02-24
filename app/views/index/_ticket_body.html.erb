@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="model-label panel-heading">
+    Thread
+  </div>
+  <div class="list-group">
+    <% ticket_body.posts.each do |post| %>
+      <div class="list-group-item">
+        <%= post.html_body.html_safe %>
+      </div>
+    <% end %>
+  </div>
+</div>

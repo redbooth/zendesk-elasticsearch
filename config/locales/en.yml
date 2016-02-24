@@ -1,0 +1,43 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  no_es_connection: "Could not connect to the Elasticsearch cluster."
+  es_connection: "Successfully connected to the Elasticsearch cluster."
+  no_zd_connection: "Could not connect to Zendesk."
+  zd_connection: "Successfully connected to the Zendesk API."
+  no_zd_es_connection: "Could not connect to the Elasticsearch cluster or Zendesk."
+  deleting_all_tickets: "Deleting all tickets."
+  all_tickets_deleted:  "Finished deleting all tickets."
+  reloading_all_tickets: "Reloading all tickets."
+  all_tickets_reloaded:  "Finished reloading all tickets."
+  invalid_ticket_start_date_configuration: "The zendesk_ticket_start_date in the application configuration file is invalid."
+  next_timestamp: "Next Timestamp:"
+  invalid_timestamp: "Invalid Timestamp."
+  timestamp_updated: "Timestamp updated."
+  timestamp_not_updated: "Timestamp could not be updated."
+  updating_tickets: "Updating tickets."
+  tickets_updated: "Finished updating tickets."
+  updating_tickets_from_time: "Updating tickets modified since Elasticsearch timestamp"
+  updating_tickets_from_config: "No valid timestamp in Elasticsearch. Updating tickets modified since configured start time"
+  no_timestamp_for_updates: "No valid timestamp for updating tickets. Aborting."
+  another_process_updating: "Another process is updating the Elasticsearch database. Try again later."
+
