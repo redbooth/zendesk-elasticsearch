@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'zendesk_search'
-set :repo_url, 'git@github.com:aerofs/whatsup.git'
+set :repo_url, 'git@github.com:aerofs/zendesk-elasticsearch.git'
 set :rvm_ruby_version, '2.2.4'
 set :keep_assets, 2
 
