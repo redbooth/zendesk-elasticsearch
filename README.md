@@ -1,4 +1,4 @@
-# Whatsup
+# Zedesk-Elasticsearch
 
 ## About
 At [AeroFS](http:///www.aerofs.com), our team technical support engineers helps users deploy and troubleshoot our products. We use [Zendesk](www.zendesk.com) to track communication with our customers in support tickets, and we document a lot of technical notes in that system while we investigate and troubleshoot. We think Zendesk is great for communicating, but we wanted to index the technical details in the tickets and unlock the institutional memory stored in them. As a part of our [2015 Thanksgiving Hackathon](https://www.aerofs.com/blog/how-we-run-hackathons/), we built Zendesk-Search to index and let us quickly search our support tickets.
